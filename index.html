@@ -57,10 +57,15 @@
           <div class="location-row">
             <span class="field-icon">⌖</span>
             <div class="location-copy">
-              <strong id="locationTitle">2. Pilih lokasi atau gunakan GPS</strong>
-              <span id="locationText">Lokasi diperlukan untuk hasil yang lebih relevan.</span>
+              <strong id="locationTitle">2. Masukkan lokasi secara manual (GPS opsional)</strong>
+              <span id="locationText">Lokasi tidak wajib diisi. Gunakan GPS atau biarkan kosong.</span>
             </div>
-            <button type="button" class="gps-button" id="gpsButton">Gunakan GPS</button>
+            <button type="button" class="gps-button" id="gpsButton">Gunakan GPS (opsional)</button>
+          </div>
+          <div class="manual-location-row">
+            <label for="manualLocation" class="sr-only">Lokasi lahan</label>
+            <input id="manualLocation" type="text" placeholder="Contoh: Pekanbaru, Riau" value="" autocomplete="off">
+            <button type="button" class="button button-outline" id="searchLocationButton">Cari lokasi</button>
           </div>
           <div class="form-grid">
             <label class="select-wrap">
@@ -88,11 +93,11 @@
             </label>
           </div>
           <button class="button button-green submit-button" type="submit">3. Analisis risiko <span>→</span></button>
-          <p class="form-disclaimer">Data cuaca aktual akan diambil setelah lokasi GPS tersedia. Data titik panas satelit dan analisis foto AI belum dihubungkan.</p>
+          <p class="form-disclaimer">GPS bisa digunakan atau dilewati. Semua data cuaca, skor risiko, hotspot, dan prediksi foto pada versi ini adalah data simulasi/buatan, bukan data faktual.</p>
         </form>
         <section class="weather-panel" id="weatherPanel" aria-live="polite">
-          <strong>Data cuaca aktual</strong>
-          <p>Tekan “Gunakan GPS” untuk mengambil cuaca berdasarkan koordinat lahan. Data diperoleh dari Open-Meteo dan memerlukan koneksi internet.</p>
+          <strong>Data cuaca simulasi</strong>
+          <p>Gunakan GPS, masukkan nama kota/kecamatan, atau lanjut tanpa lokasi. Nilai cuaca yang ditampilkan adalah data contoh buatan dan tidak memerlukan koneksi internet.</p>
         </section>
       </div>
     </section>
@@ -152,7 +157,7 @@
         <h2>Bukan sekadar angka,<br>tapi alasan di baliknya</h2>
         <p>Hasil analisis yang baik menjelaskan faktor yang memengaruhi penilaian agar warga dan petugas memahami hal yang perlu diperiksa lebih dahulu.</p>
         <ul class="orange-list">
-          <li>Data cuaca terkini dari sumber eksternal</li>
+          <li>Data cuaca contoh untuk simulasi</li>
           <li>Faktor penyebab dalam bahasa sederhana</li>
           <li>Saran tindakan dan opsi pelaporan</li>
         </ul>
@@ -166,7 +171,7 @@
         <div class="factor-tags" id="factorTags"><span>Belum ada data</span></div>
         <div class="advice-box"><strong>Yang sebaiknya dilakukan</strong><p id="adviceText">Lengkapi informasi lokasi dan kondisi lahan. Jika melihat api atau asap, utamakan keselamatan dan laporkan kepada petugas setempat.</p></div>
         <a class="button button-green report-button" href="#edukasi">Pelajari cara melapor <span>→</span></a>
-        <p class="sample-warning" id="sampleWarning">Penilaian risiko terukur belum tersedia sampai data cuaca, titik panas, dan model analisis yang tervalidasi dihubungkan.</p>
+        <p class="sample-warning" id="sampleWarning">MODE SIMULASI: skor risiko, prediksi foto, dan hotspot pada hasil merupakan data contoh buatan, bukan data faktual. Seluruh data cuaca, hotspot, skor risiko, dan prediksi foto merupakan data simulasi buatan.</p>
       </article>
     </section>
 
